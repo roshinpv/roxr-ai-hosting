@@ -30,7 +30,7 @@ export const Founder = () => {
                             <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gray-50">
                                 <Image
                                     src={`/founder.png?v=${new Date().getTime()}`}
-                                    alt="Founder of roxr.ai"
+                                    alt="Roshin - Founder of roxr.ai"
                                     fill
                                     className="object-cover object-top"
                                     unoptimized
@@ -66,12 +66,17 @@ export const Founder = () => {
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 mb-6">
                                 <span className="w-2 h-2 rounded-full bg-neon-purple" />
-                                <span className="text-[10px] text-gray-500 font-bold tracking-widest uppercase">The Perspective</span>
+                                <span className="text-[10px] text-gray-500 font-bold tracking-widest uppercase">The Foundation</span>
+                            </div>
+
+                            <div className="mb-6">
+                                <span className="text-2xl md:text-3xl font-bold text-gray-900 block mb-1">Roshin</span>
+                                <span className="text-sm text-neon-purple font-medium uppercase tracking-wider">Founder & AI Enthusiast</span>
                             </div>
 
                             <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-[0.9]">
-                                Visionary <br />
-                                <span className="text-gradient">Leadership</span>
+                                Strategic <br />
+                                <span className="text-gradient">Innovation</span>
                             </h1>
 
                             <div className="space-y-6 text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
