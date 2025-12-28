@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function EvaluationPage() {
     return (
-        <div className="min-h-screen bg-[#050505] text-white pt-32 pb-24 relative overflow-hidden">
+        <div className="min-h-screen bg-background text-foreground pt-32 pb-24 relative overflow-hidden">
             {/* Background Futuristic Grid */}
             <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_90%)]" />
@@ -28,7 +28,7 @@ export default function EvaluationPage() {
                     <Link href="/">
                         <motion.button
                             whileHover={{ x: -5 }}
-                            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12"
+                            className="inline-flex items-center gap-2 text-foreground/40 hover:text-foreground transition-colors mb-12"
                         >
                             <ArrowLeft size={16} /> Back to Hub
                         </motion.button>
@@ -44,12 +44,12 @@ export default function EvaluationPage() {
                         <span className="text-xs font-bold uppercase tracking-widest text-neon-purple">Phase 01: Initializing Neural Engine</span>
                     </motion.div>
 
-                    <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+                    <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/40">
                         AI Transformation <br />
                         <span className="text-gradient">Evaluator</span>
                     </h1>
 
-                    <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-xl text-foreground/60 mb-12 max-w-2xl mx-auto leading-relaxed">
                         The definitive tool for quantifying your business's AI potential.
                         We're training our proprietary models to analyze your organizational DNA and map a path to technical dominance.
                     </p>
@@ -69,8 +69,8 @@ export default function EvaluationPage() {
                                 className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:border-neon-cyan/50 transition-all"
                             >
                                 <item.icon className="text-neon-cyan mb-4 group-hover:scale-110 transition-transform" size={24} />
-                                <h3 className="font-bold text-sm mb-1">{item.label}</h3>
-                                <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">{item.status}</p>
+                                <h3 className="font-bold text-sm mb-1 text-foreground">{item.label}</h3>
+                                <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold">{item.status}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -81,9 +81,9 @@ export default function EvaluationPage() {
                         transition={{ delay: 1 }}
                         className="relative p-1 bg-gradient-to-r from-electric-blue via-neon-purple to-neon-cyan rounded-2xl inline-block"
                     >
-                        <div className="bg-[#050505] px-8 py-6 rounded-[14px]">
-                            <h2 className="text-2xl font-bold mb-4">Want Early Access?</h2>
-                            <p className="text-gray-400 mb-6 text-sm">Join the shortlist to be among the first to audit your business DNA.</p>
+                        <div className="bg-card px-8 py-6 rounded-[14px]">
+                            <h2 className="text-2xl font-bold mb-4 text-foreground">Want Early Access?</h2>
+                            <p className="text-foreground/60 mb-6 text-sm">Join the shortlist to be among the first to audit your business DNA.</p>
                             <Link href="/contact">
                                 <Button size="lg" className="w-full sm:w-auto">
                                     Notify Me on Launch
