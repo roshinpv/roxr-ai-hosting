@@ -38,7 +38,7 @@ export const VideoGrid = () => {
     const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
     return (
-        <section className="py-24 bg-white relative">
+        <section className="py-24 bg-background relative">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                     <div>
@@ -48,8 +48,8 @@ export const VideoGrid = () => {
                             </span>
                             <span className="text-sm font-bold text-red-600 uppercase tracking-widest">Global Knowledge Hub</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Channel <span className="text-gradient">Feed</span></h2>
-                        <p className="text-gray-600 max-w-2xl text-lg">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Channel <span className="text-gradient">Feed</span></h2>
+                        <p className="text-foreground/60 max-w-2xl text-lg">
                             Deep dives into the latest AI breakthroughs, tutorials, and strategic predictions.
                         </p>
                     </div>
@@ -66,7 +66,7 @@ export const VideoGrid = () => {
                         >
                             <Card
                                 onClick={() => setSelectedVideo(video.id)}
-                                className="p-0 overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-50 cursor-pointer"
+                                className="p-0 overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-card cursor-pointer"
                             >
                                 <div className="relative aspect-video overflow-hidden">
                                     <img
@@ -84,12 +84,12 @@ export const VideoGrid = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-6 bg-white">
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors line-clamp-2 leading-tight">
+                                <div className="p-6 bg-card">
+                                    <h3 className="text-lg font-bold text-foreground group-hover:text-red-600 transition-colors line-clamp-2 leading-tight">
                                         {video.title}
                                     </h3>
                                     <div className="mt-4 flex items-center justify-between">
-                                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Learning Resource</span>
+                                        <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.2em]">Learning Resource</span>
                                         <span className="text-red-600 text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
                                             WATCH NOW <Play size={10} fill="currentColor" />
                                         </span>
@@ -110,7 +110,7 @@ export const VideoGrid = () => {
                         href="https://www.youtube.com/channel/UCyglSJZd8j_FiK9DWGH5sXA"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-500 hover:text-red-600 font-bold transition-colors"
+                        className="text-foreground/50 hover:text-red-600 font-bold transition-colors"
                     >
                         Visit Official Channel
                     </a>

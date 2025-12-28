@@ -54,7 +54,7 @@ const services = [
 
 export const Services = () => {
     return (
-        <section id="services" className="py-24 bg-white relative overflow-hidden">
+        <section id="services" className="py-24 bg-background relative overflow-hidden">
             {/* Background Decorative elements */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-neon-purple/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-electric-blue/5 rounded-full blur-[120px] pointer-events-none" />
@@ -66,15 +66,15 @@ export const Services = () => {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 mb-4"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-border mb-4"
                         >
                             <span className="w-2 h-2 rounded-full bg-neon-purple animate-pulse" />
-                            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Core Expertise</span>
+                            <span className="text-xs font-bold text-foreground/50 uppercase tracking-widest">Core Expertise</span>
                         </motion.div>
-                        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
+                        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6 text-foreground">
                             Architecting <span className="text-gradient">Intelligence</span>
                         </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
+                        <p className="text-foreground/60 text-lg leading-relaxed">
                             We bridge the gap between abstract AI potential and concrete business dominance through a
                             specialized three-tier delivery model.
                         </p>
@@ -92,7 +92,7 @@ export const Services = () => {
                         >
                             <Card
                                 hoverEffect
-                                className={`h-full flex flex-col p-0 border-none shadow-none group ${service.featured ? "ring-2 ring-neon-purple/20 bg-gray-50/50" : "bg-white"
+                                className={`h-full flex flex-col p-0 border-none shadow-none group ${service.featured ? "ring-2 ring-neon-purple/20 bg-card/80" : "bg-card/50"
                                     }`}
                             >
                                 <div className="p-8 flex-grow">
@@ -104,16 +104,16 @@ export const Services = () => {
                                         <p className={`text-xs font-bold uppercase tracking-wider mb-2 ${service.color}`}>
                                             {service.subtitle}
                                         </p>
-                                        <h3 className="text-2xl font-black text-gray-900 mb-4">
+                                        <h3 className="text-2xl font-black text-foreground mb-4">
                                             {service.title}
                                         </h3>
-                                        <p className="text-gray-600 leading-relaxed mb-8">
+                                        <p className="text-foreground/60 leading-relaxed mb-8">
                                             {service.description}
                                         </p>
                                     </div>
 
                                     <div className="space-y-4 mb-8">
-                                        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest border-l-2 border-gray-200 pl-3">
+                                        <p className="text-xs font-bold text-foreground/40 uppercase tracking-widest border-l-2 border-border pl-3">
                                             Unique Selling Points
                                         </p>
                                         <ul className="space-y-3">
@@ -122,7 +122,7 @@ export const Services = () => {
                                                     <span className={`mt-1 transition-transform group-hover/item:scale-110 ${service.color}`}>
                                                         <CheckCircle2 size={16} />
                                                     </span>
-                                                    <span className="text-sm font-medium text-gray-700 leading-tight">
+                                                    <span className="text-sm font-medium text-foreground/70 leading-tight">
                                                         {usp}
                                                     </span>
                                                 </li>
@@ -144,7 +144,7 @@ export const Services = () => {
                                                 Initialize Transformation
                                             </span>
                                         </span>
-                                        <span className="w-8 h-px bg-gray-300 group-hover/link:w-12 group-hover/link:bg-neon-purple transition-all duration-300" />
+                                        <span className="w-8 h-px bg-border group-hover/link:w-12 group-hover/link:bg-neon-purple transition-all duration-300" />
                                     </Link>
                                 </div>
                             </Card>

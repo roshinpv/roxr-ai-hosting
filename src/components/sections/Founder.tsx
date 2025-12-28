@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export const Founder = () => {
     return (
-        <section id="founder" className="relative overflow-hidden bg-white">
+        <section id="founder" className="relative overflow-hidden bg-background">
             {/* Ambient Background Elements */}
             <div className="absolute top-0 right-0 w-1/2 h-screen bg-gradient-to-l from-neon-purple/5 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/2 h-screen bg-gradient-to-r from-electric-blue/5 to-transparent pointer-events-none" />
@@ -27,7 +27,7 @@ export const Founder = () => {
                         className="w-full lg:w-1/2 relative"
                     >
                         <div className="relative aspect-square max-w-sm mx-auto">
-                            <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gray-50">
+                            <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-8 border-card shadow-2xl bg-card">
                                 <Image
                                     src={`/founder.png?v=${new Date().getTime()}`}
                                     alt="Roshin - Founder of roxr.ai"
@@ -42,15 +42,15 @@ export const Founder = () => {
                                 initial={{ y: 20, opacity: 0, x: "-50%" }}
                                 whileInView={{ y: 0, opacity: 1, x: "-50%" }}
                                 transition={{ delay: 0.5 }}
-                                className="absolute bottom-0 left-1/2 translate-y-1/2 bg-white p-4 rounded-xl shadow-xl border border-gray-100 z-20 hidden md:block whitespace-nowrap"
+                                className="absolute bottom-0 left-1/2 translate-y-1/2 bg-card p-4 rounded-xl shadow-xl border border-border z-20 hidden md:block whitespace-nowrap"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-lg bg-neon-purple/10 flex items-center justify-center text-neon-purple">
                                         <Award size={20} />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">20 Years</p>
-                                        <p className="text-[10px] text-gray-500 uppercase font-bold">Industry Expertise</p>
+                                        <p className="text-sm font-bold text-foreground">20 Years</p>
+                                        <p className="text-[10px] text-foreground/50 uppercase font-bold">Industry Expertise</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -64,13 +64,13 @@ export const Founder = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 mb-6">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-border mb-6">
                                 <span className="w-2 h-2 rounded-full bg-neon-purple" />
-                                <span className="text-[10px] text-gray-500 font-bold tracking-widest uppercase">The Foundation</span>
+                                <span className="text-[10px] text-foreground/50 font-bold tracking-widest uppercase">The Foundation</span>
                             </div>
 
                             <div className="mb-6">
-                                <span className="text-2xl md:text-3xl font-bold text-gray-900 block mb-1">Roshin</span>
+                                <span className="text-2xl md:text-3xl font-bold text-foreground block mb-1">Roshin</span>
                                 <span className="text-sm text-neon-purple font-medium uppercase tracking-wider">Founder & AI Enthusiast</span>
                             </div>
 
@@ -79,13 +79,13 @@ export const Founder = () => {
                                 <span className="text-gradient">Innovation</span>
                             </h1>
 
-                            <div className="space-y-6 text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
+                            <div className="space-y-6 text-lg text-foreground/70 mb-10 leading-relaxed max-w-xl">
                                 <p>
                                     Founded on the principle that AI should be an extension of human ambition, not a replacement for it.
                                     I believe every business has a "hidden intelligence" waiting to be unlocked.
                                 </p>
                                 <p>
-                                    At <span className="font-bold text-gray-900">roxr.ai</span>, we don't just build tools; we architect the
+                                    At <span className="font-bold text-foreground">roxr.ai</span>, we don't just build tools; we architect the
                                     frameworks that allow organizations to evolve at the speed of thought.
                                 </p>
                             </div>
@@ -97,10 +97,10 @@ export const Founder = () => {
                                     </Button>
                                 </Link>
                                 <div className="flex items-center gap-3">
-                                    <a href="#" className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all">
+                                    <a href="#" className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-foreground/40 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all">
                                         <Twitter size={20} />
                                     </a>
-                                    <a href="#" className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 transition-all">
+                                    <a href="#" className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-foreground/40 hover:text-electric-blue hover:border-electric-blue/50 transition-all">
                                         <Linkedin size={20} />
                                     </a>
                                 </div>
@@ -138,12 +138,12 @@ export const Founder = () => {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
                         >
-                            <Card className="h-full p-8 bg-gray-50/50 border-none hover:bg-white hover:shadow-xl transition-all group">
-                                <div className={`w-12 h-12 rounded-xl mb-6 bg-white shadow-sm flex items-center justify-center ${item.color}`}>
+                            <Card className="h-full p-8 bg-card/50 border-none hover:bg-card hover:shadow-xl transition-all group">
+                                <div className={`w-12 h-12 rounded-xl mb-6 bg-background shadow-sm flex items-center justify-center ${item.color}`}>
                                     <item.icon size={24} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                                <p className="text-foreground/50 text-sm leading-relaxed">{item.desc}</p>
                             </Card>
                         </motion.div>
                     ))}
@@ -168,7 +168,7 @@ export const Founder = () => {
 
                         <div className="w-16 h-1 bg-gradient-to-r from-neon-purple to-neon-cyan mx-auto mb-10" />
 
-                        <p className="text-gray-400 text-lg">
+                        <p className="text-white/60 text-lg">
                             Ready to explore what AI can do for your unique mission? Let's build something prophetic together.
                         </p>
                     </div>

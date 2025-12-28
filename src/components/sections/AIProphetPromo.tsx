@@ -9,7 +9,7 @@ import { SubscribeButton } from "@/components/ui/SubscribeButton";
 
 export const AIProphetPromo = () => {
     return (
-        <section id="ai-prophet" className="py-20 relative overflow-hidden bg-gradient-to-r from-neon-purple/5 to-transparent border-y border-gray-100">
+        <section id="ai-prophet" className="py-20 relative overflow-hidden bg-gradient-to-r from-neon-purple/5 to-transparent border-y border-border">
             {/* Noise texture via CSS */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
             <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-neon-purple/20 to-transparent blur-3xl" />
@@ -26,7 +26,7 @@ export const AIProphetPromo = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
+                        className="text-4xl md:text-5xl font-bold mb-6 text-foreground"
                     >
                         Learn with <span className="text-neon-purple">AIProphet</span>
                     </motion.h2>
@@ -35,7 +35,7 @@ export const AIProphetPromo = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-gray-600 mb-8"
+                        className="text-xl text-foreground/60 mb-8"
                     >
                         Our dedicated knowledge-sharing hub. We break down complex AI concepts, provide strategic insights,
                         and share the tools you need to stay ahead of the curve.

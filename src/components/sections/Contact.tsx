@@ -30,11 +30,11 @@ export const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
                             Let's Build the <br />
                             <span className="text-gradient">Future</span>
                         </h2>
-                        <p className="text-xl text-gray-600 mb-8 max-w-md">
+                        <p className="text-xl text-foreground/60 mb-8 max-w-md">
                             Ready to scale your AI vision? Whether you need development, growth strategy, or media coverage, roxr.ai is your partner.
                         </p>
 
@@ -42,8 +42,8 @@ export const Contact = () => {
                             <div className="flex items-center gap-4">
                                 <div className="w-1 h-12 bg-gradient-to-b from-neon-purple to-electric-blue rounded-full" />
                                 <div>
-                                    <h4 className="text-gray-900 font-bold">Email Us</h4>
-                                    <p className="text-gray-400">hello@roxr.ai</p>
+                                    <h4 className="text-foreground font-bold">Email Us</h4>
+                                    <p className="text-foreground/40">hello@roxr.ai</p>
                                 </div>
                             </div>
                         </div>
@@ -54,50 +54,50 @@ export const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <Card className="p-8 bg-white/80 backdrop-blur-xl border-gray-100 shadow-2xl">
+                        <Card className="p-8 bg-card/80 backdrop-blur-xl border-border shadow-2xl">
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-gray-700">Name</label>
+                                    <label className="text-sm font-medium text-foreground/70">Name</label>
                                     <input
                                         type="text"
                                         required
                                         value={formState.name}
                                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-gray-900 focus:outline-none focus:border-neon-purple transition-colors"
+                                        className="w-full bg-foreground/5 border border-border rounded-lg p-3 text-foreground focus:outline-none focus:border-neon-purple transition-colors placeholder:text-foreground/20"
                                         placeholder="John Doe"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-gray-700">Email</label>
+                                    <label className="text-sm font-medium text-foreground/70">Email</label>
                                     <input
                                         type="email"
                                         required
                                         value={formState.email}
                                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-gray-900 focus:outline-none focus:border-neon-purple transition-colors"
+                                        className="w-full bg-foreground/5 border border-border rounded-lg p-3 text-foreground focus:outline-none focus:border-neon-purple transition-colors placeholder:text-foreground/20"
                                         placeholder="john@company.com"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-gray-700">Project Type</label>
+                                    <label className="text-sm font-medium text-foreground/70">Project Type</label>
                                     <select
                                         value={formState.type}
                                         onChange={(e) => setFormState({ ...formState, type: e.target.value })}
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-gray-900 focus:outline-none focus:border-neon-purple transition-colors"
+                                        className="w-full bg-foreground/5 border border-border rounded-lg p-3 text-foreground focus:outline-none focus:border-neon-purple transition-colors"
                                     >
-                                        <option value="development">AI Application Development</option>
-                                        <option value="growth">Business Growth & Strategy</option>
-                                        <option value="media">Media & Promotion (AIProphet)</option>
-                                        <option value="other">Other</option>
+                                        <option value="development" className="bg-card">AI Application Development</option>
+                                        <option value="growth" className="bg-card">Business Growth & Strategy</option>
+                                        <option value="media" className="bg-card">Media & Promotion (AIProphet)</option>
+                                        <option value="other" className="bg-card">Other</option>
                                     </select>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-gray-700">Message</label>
+                                    <label className="text-sm font-medium text-foreground/70">Message</label>
                                     <textarea
                                         required
                                         value={formState.message}
                                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-gray-900 focus:outline-none focus:border-neon-purple transition-colors h-32 resize-none"
+                                        className="w-full bg-foreground/5 border border-border rounded-lg p-3 text-foreground focus:outline-none focus:border-neon-purple transition-colors h-32 resize-none placeholder:text-foreground/20"
                                         placeholder="Tell us about your project..."
                                     />
                                 </div>

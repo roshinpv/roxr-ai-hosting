@@ -25,21 +25,30 @@ export const metadata: Metadata = {
   keywords: ["AI Application Development", "AI Consultation", "Business Transformation", "AIProphet", "Knowledge Sharing", "GenAI Strategy"],
 };
 
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--neon-purple)]/30 selection:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased bg-background text-foreground selection:bg-neon-purple/30 selection:text-white`}
       >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

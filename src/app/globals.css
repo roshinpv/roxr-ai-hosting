@@ -12,6 +12,23 @@
   /* Pink/Magenta (replacing Cyan) */
   --electric-blue: #5b60ff;
   /* Logo Start Blue */
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --background: #050505;
+  --foreground: #f8fafc;
+
+  --neon-purple: #a78bfa;
+  --neon-cyan: #f472b6;
+  --electric-blue: #7c7fff;
+
+  --card: #0f0f0f;
+  --card-foreground: #f8fafc;
+  --border: #1e293b;
 }
 
 @theme inline {
@@ -20,6 +37,9 @@
   --color-neon-purple: var(--neon-purple);
   --color-neon-cyan: var(--neon-cyan);
   --color-electric-blue: var(--electric-blue);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -40,15 +60,24 @@ body {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass-card {
+  background: rgba(15, 15, 15, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .text-gradient {

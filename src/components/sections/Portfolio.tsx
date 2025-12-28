@@ -42,10 +42,10 @@ export const Portfolio = () => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured <span className="text-gradient">Work</span></h2>
-                        <p className="text-gray-600">Case studies from across the roxr ecosystem.</p>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">Featured <span className="text-gradient">Work</span></h2>
+                        <p className="text-foreground/60">Case studies from across the roxr ecosystem.</p>
                     </div>
-                    <button className="text-neon-cyan hover:text-gray-900 transition-colors underline-offset-4 hover:underline">
+                    <button className="text-neon-cyan hover:text-foreground transition-colors underline-offset-4 hover:underline">
                         View All Projects
                     </button>
                 </div>
@@ -65,16 +65,16 @@ export const Portfolio = () => {
                                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 transition-transform duration-700 group-hover:scale-110`} />
 
                                 {/* Overlay Content */}
-                                <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-white/95 via-white/40 to-transparent">
+                                <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/95 via-background/40 to-transparent">
                                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                         <span className="text-xs font-bold text-neon-cyan uppercase tracking-wider mb-2 block">
                                             {project.category}
                                         </span>
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                                        <p className="text-gray-600 line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                                        <h3 className="text-2xl font-bold text-foreground mb-2">{project.title}</h3>
+                                        <p className="text-foreground/60 line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                                             {project.description}
                                         </p>
-                                        <div className="flex items-center gap-2 text-gray-400 group-hover:text-gray-900 transition-colors text-sm opacity-0 group-hover:opacity-100 duration-300">
+                                        <div className="flex items-center gap-2 text-foreground/40 group-hover:text-foreground transition-colors text-sm opacity-0 group-hover:opacity-100 duration-300">
                                             View Case Study <ExternalLink size={14} />
                                         </div>
                                     </div>

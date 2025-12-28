@@ -24,7 +24,7 @@ export const Hero = () => {
                 />
 
                 {/* Grid/Mesh */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)] opacity-20" />
             </div>
 
             <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
@@ -32,7 +32,7 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="mb-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 backdrop-blur-sm"
+                    className="mb-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-border backdrop-blur-sm"
                 >
                     <span className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
                     <span className="text-xs text-neon-cyan font-medium tracking-wider uppercase flex items-center gap-2">
@@ -63,7 +63,7 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed"
+                    className="text-lg md:text-xl text-foreground/60 max-w-2xl mb-10 leading-relaxed"
                 >
                     Scale your vision with Strategic AI Consultation, Bespoke Application Development,
                     and holistic Business Transformation.
@@ -97,7 +97,7 @@ export const Hero = () => {
             </div>
 
             {/* Abstract visual representation at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-20 pointer-events-none" />
         </section>
     );
 };

@@ -9,14 +9,14 @@ const partners = [
 
 export const TrustedBy = () => {
     return (
-        <section className="py-10 border-y border-gray-200 bg-gray-50/50 overflow-hidden">
+        <section className="py-10 border-y border-border bg-card/30 overflow-hidden">
             <div className="container mx-auto px-4 mb-6 text-center">
-                <p className="text-sm text-gray-400 uppercase tracking-widest font-medium">Trusted by Industry Leaders</p>
+                <p className="text-sm text-foreground/40 uppercase tracking-widest font-medium">Trusted by Industry Leaders</p>
             </div>
 
             <div className="flex relative items-center">
-                <div className="absolute left-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10" />
-                <div className="absolute right-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10" />
+                <div className="absolute left-0 w-20 h-full bg-gradient-to-r from-background to-transparent z-10" />
+                <div className="absolute right-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10" />
 
                 <motion.div
                     className="flex gap-16 items-center whitespace-nowrap"
@@ -24,7 +24,7 @@ export const TrustedBy = () => {
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 >
                     {[...partners, ...partners, ...partners].map((partner, i) => (
-                        <span key={i} className="text-xl md:text-2xl font-bold text-gray-300 hover:text-gray-500 transition-colors uppercase cursor-default">
+                        <span key={i} className="text-xl md:text-2xl font-bold text-foreground/20 hover:text-foreground/50 transition-colors uppercase cursor-default">
                             {partner}
                         </span>
                     ))}
