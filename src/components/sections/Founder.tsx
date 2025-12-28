@@ -24,7 +24,7 @@ export const Founder = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="lg:w-1/2 relative"
+                        className="w-full lg:w-1/2 relative"
                     >
                         <div className="relative aspect-square max-w-sm mx-auto">
                             <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gray-50">
